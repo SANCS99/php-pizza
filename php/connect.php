@@ -2,8 +2,8 @@
 
 
 $dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
+$dbUsername = "user1";
+$dbPassword = "user1";
 $dbName = "pizza";
 
 

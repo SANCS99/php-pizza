@@ -5,31 +5,32 @@ session_start();
 
 
 
-	<?php 
+<?php 
 
 
-	require "php/connect.php";
 
-	if (isset($_POST['cart'])) {
-		$user_name = $_SESSION['username'];
-		$item_id = $_POST['item_id'];
+require "php/connect.php";
 
-		if(isset($_SESSION['username'])){
+if (isset($_POST['cart'])) {
+	$user_name = $_SESSION['username'];
+	$item_id = $_POST['item_id'];
+
+	if(isset($_SESSION['username'])){
 
 
-		if (mysqli_query($conn,"INSERT INTO cart (user_name,item_id) VALUES ('$user_name','$item_id')",)) {
-			header("Location:menu.php");
-			exit;
-			echo " data added ";
-		}
-	}else{
-			
-		header("Location:login.php");
-		exit();
+	if (mysqli_query($conn,"INSERT INTO cart (user_name,item_id) VALUES ('$user_name','$item_id')")) {
+		header("Location:menu.php");
+		exit;
+		echo " data added ";
 	}
-	
-	}
-	?>
+}else{
+		
+	header("Location:login.php");
+	exit();
+}
+
+}
+?>
 
 
 
