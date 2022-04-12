@@ -1,0 +1,50 @@
+Those Hut
+|-/images
+|    |-images for templates
+|
+|-/css
+|    |-.css files for templates
+|
+|-/js
+|    |-.js files for templates
+|
+|-/elements
+|       |-navbar.php
+|       |-.php footer header/footer files for templates
+|
+|-/admin
+|    |-/images
+|    |  |-/images for admin templates
+|    |  |-/images uploads by admin
+|    |
+|    |-/css
+|    |  |-.css files for admin
+|    |
+|    |-/js
+|    |   |-.js files for admin
+|    |
+|    |-/adminelements
+|    |  |-navbar.php
+|    |  |-.php footer header/footer files for admin
+|    |
+|    |-index.php
+|    |-viewfoods.php
+|    |-addnewitems.php
+|    |-edititems.php
+|    |-deleteitems.php
+|    |-loginadmin.php
+|    |-orderdetails.php
+|    |-customersdetails.php         
+|    
+|-Index.php
+|-Results.php
+|-Cart.php
+|-ViewProfile.php
+|-EditProfile.php
+|-login.php
+|-signin.php
+|-aboutus.php
+|-locations.php
+|-menu.php
+|-offers.php
+

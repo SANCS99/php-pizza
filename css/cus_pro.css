@@ -1,0 +1,139 @@
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	background-image: url("../images/back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+#acc_name{
+	font-size: 25px;
+	border: none;
+	border-bottom: 3px solid black;
+	/*opacity: 0.4;*/
+	background: transparent;
+	margin-bottom: 30px;
+}
+
+
+
+#email_address{
+	font-size: 25px;
+	border: none;
+	border-bottom: 3px solid black;
+	/*opacity: 0.4;*/
+	background: transparent;
+	margin-bottom: 30px;
+}
+
+#bill_amount_1{
+	margin-bottom: 15px;
+	margin-right: 10px;
+	border:none;
+	border-bottom: 3px solid black;
+	background:transparent;
+	font-size: 25px;
+	font-family: 'Roboto Mono', monospace;
+	
+}
+
+#date_1{
+	font-size: 25px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	border:none;
+	border-bottom: 3px solid black;
+	background:transparent;
+	font-family: 'Roboto Mono', monospace;
+	
+}
+
+#pur_btn{
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	cursor: pointer;
+	background: transparent;
+	border-radius: 25px;
+	vertical-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+	border: 2px solid red;
+	text-shadow: 0 0 3px #FF0000;
+}
+
+
+#pur_btn:hover {background-color: #ffe6cc}
+
+#pur_btn:active {
+  background-color: #ffcc99;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+ #msg_btn{
+    font-size:25px;
+	padding-top: 10px;
+	text-shadow: 2px 2px 15px #ff1a66;
+	padding-bottom: 10px;
+	background: transparent;
+	cursor: pointer;
+ 	border-radius: 25px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	margin-right: 80px;
+
+
+}
+
+#msg_btn:hover {background-color: #ff6666}
+
+#msg_btn:active {
+  background-color: #ff4d4d;
+  box-shadow: 0 5px #990000;
+  transform: translateY(4px);
+
+}
+
+
+
+ #pay_btn{
+    font-size:25px;
+	padding-top: 10px;
+	text-shadow: 2px 2px 15px #ff1a66;
+	padding-bottom: 10px;
+	background: transparent;
+	cursor: pointer;
+ 	border-radius: 25px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+
+
+
+}
+
+#pay_btn:hover {background-color: #ff6666}
+
+#pay_btn:active {
+  background-color: #ff4d4d;
+  box-shadow: 0 5px #990000;
+  transform: translateY(4px);
+}
+
+@media (max-width: 700px){
+
+			#pay_btn{
+				float: left;
+			}
+			#msg_btn{
+				float: right;
+			}
+
+}

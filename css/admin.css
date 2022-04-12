@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #f1f2f6;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+}
+
+.menu .wrapper .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #0c2461;
+  padding: 30px 0;
+}
+
+.menu .wrapper .sidebar h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu .wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.05);
+}
+
+.menu .wrapper .sidebar ul li a {
+  color: #fff;
+  display: block;
+}
+
+.menu .wrapper .sidebar ul li a i{
+  margin-right: 5px;
+}
+
+.menu .wrapper .sidebar ul li:hover {
+  background: #1e3799;
+}
+
+.logout-btn{
+  margin: 10px;
+  height: 50px;
+  background-color: #034f84;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.logout-btn a{
+  margin: 5px;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.logout-btn a i{
+  margin-right: 5px;
+}
+
+/*content*/
+.content {
+  width: 100%;
+  margin-left: 205px;
+  padding: 3% 0;
+}
+
+.content {
+  background-color: #f1f2f6;
+}
+
+.col-4 {
+  width: 18%;
+  background-color: #fff;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  text-align: center;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+/*manage admin page*/
+table{ 
+  width:calc(100% - 205px);
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+  background: #fafafa;
+}
+
+table tr th{
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table tr td{
+  padding: 12px 15px;
+}
+
+table tr th{
+  background: #14213d; 
+  color: #fafafa;
+}
+
+table tr:nth-child(odd){
+  background: #eeeeee;
+}
+
+
+
+.btn-add {
+  background-color: #1e90ff;
+  padding: 1%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-add:hover {
+  background-color: #3742fa;
+}
+
+.btn-update {
+  background-color: #7bed9f;
+  padding: 1%;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-update:hover {
+  background-color: #2ed573;
+}
+
+.btn-delete {
+  background-color: #ff6b81;
+  padding: 1%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-delete:hover {
+  background-color: #ff4757;
+}
+
+/*add and and update form*/
+.outer-wrap {
+  height: 520px;
+  width: 780px;
+  background: #fff;
+  padding: 3px;
+  margin: auto 100px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.outer-wrap .img-wrap {
+  height: 100%;
+  width: 40%;
+  position: relative;
+  border-radius: 20px;
+}
+
+.outer-wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.outer-wrap .form-wrap {
+  width: 60%;
+  height: 100%;
+  padding: 100px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  text-align: center;
+}
+
+.form-wrap form input {
+  height: 36px;
+  width: 100%;
+  border-radius: 30px;
+  margin: 10px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background: rgba(223, 221, 221, 0.822);
+}
+
+.form-wrap form select {
+  height: 36px;
+  width: 100%;
+  border-radius: 30px;
+  margin: 10px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background: rgba(223, 221, 221, 0.822);
+}
+
+.form input:focus {
+  outline: none;
+  border: none;
+  background: rgba(190, 189, 189, 0.822);
+}
+
+.footer {
+  background-color: black;
+  color: #fff;
+}
+
+.menu .wrapper .sidebar .footer {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  bottom: 0;
+  line-height: 50px;
+}
+
+.menu .wrapper .sidebar .footer p {
+  padding-left: 10px;
+}

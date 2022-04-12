@@ -1,0 +1,295 @@
+body{
+		
+	background-color:#344A6B;
+	
+}
+
+.container{
+    width: 80%;
+    margin: 10px auto;
+	padding: 0%;
+	border-radius: 25px;
+	width: 95%;
+
+}
+
+li {
+	float: left;
+}
+
+.navigation-bar {
+	overflow: hidden;
+    width: 100%;  /* i'm assuming full width */
+	height: 64px; /* change it to desired width */
+	background-color: #8998af;
+	border-radius: 25px;
+
+}
+    
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 84px;
+    height: 64px;
+    margin-right: 1%;/*need to change this*/
+	margin-top: 0;
+	/*border:1px solid #8998af;*/
+	border-radius: 25px;
+}
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 64px;        /* if you want it to take the full height of the bar */
+	line-height: 64px;    /* if you want it vertically middle of the navbar */
+	background-color: #8998af;	
+	border-radius: 25px;
+}
+
+.navigation-bar .search-container {
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 1%;
+	background-color: #8998af;
+	
+	
+  }
+  
+  .navigation-bar input[type=text] {
+	
+	font-size: 17px;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: #8998af;
+
+	
+  }
+  
+  .navigation-bar .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: -12px;
+	background:  #8998af;
+	font-size: 25px;
+	border: none;
+	cursor: pointer;}
+	
+
+  .dd{
+	  background-color: #8998af;
+  }
+  
+  .user-logo{
+	width: 46px;
+    height: 46px;
+    border-radius: 100%;
+	overflow: hidden;
+	
+	margin-top: 10px; 
+  }
+
+  .cart-logo{
+	
+	width: 46px;
+    height: 46px;
+    border-radius: 100%;
+	overflow: hidden;
+	margin-top: 10px;  
+  }
+
+  .tg{
+	  color:black;
+	  text-shadow: transparent;
+	  font-weight: bold;
+	  text-decoration: none;
+  }
+  .tg:hover{
+	  color: rgb(65, 64, 64);
+  }
+
+ .tg_2{
+	color:#7e7e7e(236, 177, 177);
+	text-shadow: transparent;
+	font-weight: bold;
+	text-decoration: none;	  
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+.navigation-bar .icon {
+	display: none;
+  }
+  
+  
+  @media screen and (max-width: 1135px) {
+	.navigation-bar a:not(:first-child) {display: none;}
+	.navigation-bar a.icon {
+	  float: right;
+	  display: block;
+	}
+  }
+
+
+@media screen and (max-width: 1135px) {
+	.navigation-bar.responsive {
+		position: relative;
+		height:500px;
+		margin:0;
+	}
+	.navigation-bar.responsive .icon {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  
+	}
+  
+	.navigation-bar.responsive a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+	.navigation-bar.responsive a img {
+		float: none;
+		display: block;
+		text-align: left;
+	  }
+	
+  }
+
+  @media screen and (max-width: 455px) {
+	.navigation-bar div:not(:first-child) {display: none;}
+  }
+
+
+
+/*CSS for nav bar ends here*/
+
+
+
+
+h4{
+	text-align: justify;
+	background-color: None;
+	
+	box-sizing: border-box;
+}
+
+.bgnone{
+	background-color: None;
+}
+
+.session{
+	opacity: 85%;
+	position: absolute;
+	background-image: url('../images/background.jpg');
+	width: 50%;
+	border-radius: 25px;
+
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	background-color: None;
+}
+
+.abt_session_0{
+	height:600px;
+	opacity: 100%;
+
+
+}
+
+#all {
+	text-align: center;
+	/*border: 2px solid red*/ ;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	/*position: absolute;*/
+	top: 100px;
+	left: 40px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	background-color: None;
+}
+
+#img1{
+	/*position: absolute;
+	top: 100px;*/
+	/*width: 50% ;*/
+	top: 50px;
+	
+	width: 800px;
+	height: 850px;
+	border-radius: 15%;
+	opacity: 0.8;
+	max-width: 100%;
+}
+
+.img0 {
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	max-width: 100%;
+		float: right;
+	margin-top: 200px;
+	background-color: None;
+}
+
+
+@media (max-width: 700px){
+	h3 , h4 {
+		width: 400px;
+	}
+	.abt_session_0{
+		width:100%;
+		height:760px;
+	}
+	.session{
+		width: 91%;
+		opacity: 85%;
+	}
+
+}
+/*CSS for footer starts here*/
+
+.footer{
+	background-color: black;
+	height:220px;
+}
+
+.footer_1{
+
+	display: inline-block;
+	background: none;
+	width : 30%;
+	height:100%;
+	margin:0% 0.9%;
+	/*border:1px solid white;*/
+	vertical-align: top;
+	border-radius: 25px;
+}
+
+.footer_1 p{
+	color:white;
+	background: none;
+}
+.footer_1 p b{
+	color:white;
+	background: none;
+		
+}
+.footer_1  a{
+	color:white;
+	background: none;	
+	text-decoration: none;
+
+}
+
+.footer_1 a img{
+	height:30px;
+	width:100px;
+	background: none;
+	
+}
+
+/*CSS for footer ends here*/
+

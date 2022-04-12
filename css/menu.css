@@ -1,0 +1,214 @@
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+.container{
+    width: 80%;
+    margin: 10px auto;
+	padding: 0%;
+
+	border-radius: 25px;
+	width: 95%;
+
+}
+
+/*body of menu*/
+
+div.menus{
+	display: flex;
+	flex-direction: row;
+	font-size: 25px;
+	text-align: center;
+	border-radius: 25px;
+  background-color: #8998af;
+  height: 50px;
+}
+
+.menuitem{
+  margin-top: auto;
+  margin-bottom: auto;
+	background-color: transparent;
+  font: 0.8em sans-serif;
+	flex: 33.3%;
+  
+
+}
+.menuitem a{
+  text-decoration: none;
+  color: #000;
+	background-color: #8998af;
+}
+
+.menuitem a:hover{
+  border-bottom: 3px solid blue;
+}
+
+#foods1{
+  background:url("../images/assets/foods.png"); 
+
+  background-repeat: no-repeat;
+  border-image: none;
+  background-size: contain;
+  position: left;
+  padding-left: 30px
+  
+}
+#foods2{
+  background:url("../images/assets/drinks.png"); 
+
+  background-repeat: no-repeat;
+  border-image: none;
+  background-size: contain;
+  position: left;
+  padding-left: 30px
+  
+}
+#foods3{
+  background:url("../images/assets/desserts.png"); 
+
+  background-repeat: no-repeat;
+  border-image: none;
+  background-size: contain;
+  position: left;
+  padding-left: 30px
+  
+}
+
+.active{
+  border-bottom: 3px solid blue;
+}
+
+.board{
+  background-image:url("../images/menuback.png");
+  background-repeat: no-repeat;
+  
+  margin: 10px auto;
+  display: inline-block;
+  
+  background-size:cover;
+  border-radius: 80px; 
+  background-position: center;
+ 
+
+  
+
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  background-color: transparent;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 3px;
+  background-color: transparent;
+  display: inline-block;
+}
+
+/* cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 60px;
+
+}
+.detail{
+  display: flex;
+  background-color: transparent;
+}
+.name{
+  display: inline-block;
+  background-color: transparent; 
+  width:70%;
+}
+.name h1{
+  background-color: transparent; 
+  float: left;
+  padding: 0 10%;
+  font-size:20px;
+  color: #ff1a1a;
+}
+.price{
+  display: inline-block;
+  width:30%; 
+  float: right;
+  background-color: transparent;
+}
+
+.price p{
+  color: grey;
+  font-size: 22px;
+  background-color: transparent;
+  font-size: 15px;
+  color: #ff1a1a;
+
+}
+
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding:3px 0px;
+  color: white;
+  background-color: #ff1a1a;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 100%;
+  width: 50%;
+}
+
+.card p{
+  background-color: transparent;
+  padding: 5px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+/* Responsive columns */
+@media screen and (max-width: 800px) {
+  .row {
+  margin: 30px;
+  background-color: transparent;
+  display: block;
+}
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    }
+    .card{
+      border-radius: 20%;
+    }
+    .board{
+      background-color: #fff;
+      background-image:url("../images/menubg.png");
+      background-size: 600px 100%;  
+    }
+  }
+
+
+
+
