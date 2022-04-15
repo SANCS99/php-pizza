@@ -1,5 +1,6 @@
 <?php
 session_start();
+$i=0
 
 			?>
 
@@ -17,7 +18,7 @@ session_start();
 		if(isset($_SESSION['username'])){
 
 
-		if (mysqli_query($conn,"INSERT INTO cart (user_name,item_id) VALUES ('$user_name','$item_id')",)) {
+		if (mysqli_query($conn,"INSERT INTO cart (user_name,item_id) VALUES ('$user_name','$item_id')")) {
 			header("Location:menu.php");
 			exit;
 			echo " data added ";

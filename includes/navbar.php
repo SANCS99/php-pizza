@@ -1,9 +1,4 @@
 
-<?php
-session_start();
-
-?>
-
 <head>
 		<!-- Link to CSS file -->
 		<link rel="stylesheet" href="css/style.css">
@@ -22,7 +17,7 @@ session_start();
 					<img class="logo" src="images/those logo1.jpg">
 				</a>
 				<div class="search-container">
-					<form style="background-color: #8998af;"method='post' action="../results.php">
+					<form style="background-color: #8998af;"method='post' action="results.php">
 					  <input type="text" placeholder="Search.." name="search" required>
 					  <button type="submit"><i style="background-color: #8998af;" class="fa fa-search"></i></button>
 					</form>

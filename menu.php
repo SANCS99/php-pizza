@@ -1,5 +1,8 @@
 <?php
 session_start();
+$i=0;
+$j=0;
+$k=0;
 
 			?>
 
@@ -205,7 +208,7 @@ include_once 'includes/navbar.php';
 	            
 					<div class="column">	
 						<form action="" method="post" class="card" id="add_to_cart">
-  							<img src="/images/food/<?php echo $row3["image_src"]; ?>" alt="food" style="width:100%; background-color: transparent;">
+  							<img src="images/food/<?php echo $row3["image_src"]; ?>" alt="<?php echo $row3["image_src"]; ?>" style="width:100%; background-color: transparent;">
   							<div class="detail">
   								<div class="name">
   									<h1 style="margin-bottom:0px; margin-top: 15px; "><?php echo $row3["item_name"]; ?></h1>	
@@ -216,11 +219,7 @@ include_once 'includes/navbar.php';
   							</div>
 
   							<input type="hidden" name="item_id" value="<?php echo $row3["item_id"]; ?>" />
-							  <?php 
-							 	if (condition) {
-									 # code...
-								 } 
-							  ?>
+				
 
   							<p><button value="Submit" name="cart" value="add" type="submit"><img style="background-color: transparent; padding-right: 5%; width: 15px;" src="images/assets/cart.png">Add to Cart</button></p>
 						</form>

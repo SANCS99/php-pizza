@@ -7,6 +7,7 @@ session_start();
             }else{
 				echo "nooo:";*/
 			}
+			$total=0;
 			?>
 
 
@@ -75,6 +76,7 @@ include_once 'includes/navbar.php';
 					<div>
 						
 							<table class="center table_1">
+								
 					<?php
 					
 					if (mysqli_num_rows($result1) > 0) {
@@ -108,6 +110,7 @@ include_once 'includes/navbar.php';
 										<td>
 											<p><b>Rs.<?php echo $row2["price"]; ?></b></p>
 										</td>
+										
 										
 									</tr>
 									
@@ -172,8 +175,10 @@ include_once 'includes/navbar.php';
 						<td>
 						
 							<input name="order" type="submit" value="Order Now" ></td>
+							
 							</tr>
 					</form>
+					<td><a href="includes\del.cart.php"?user=$username><button>Remove all</button></a></td>
 					</table>
 					
 
