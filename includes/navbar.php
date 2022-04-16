@@ -14,7 +14,7 @@
 <!--navigation bar seccion start here-->
 <div class="navigation-bar" id="myTopnav">
 				<a href="index.php">
-					<img class="logo" src="images/those logo1.jpg">
+					<img class="logo" src="images/logo2.png">
 				</a>
 				<div class="search-container">
 					<form style="background-color: #8998af;"method='post' action="results.php">

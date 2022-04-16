@@ -64,7 +64,7 @@ include_once 'includes/navbar.php';
 		<!--session1 starts here-->
 		<div class="container">
 			<div class="menus">
-				<div class="menuitem"><a  onclick="showTab(1);" id="tab-1" class="active">Foods</a></div>
+				<div class="menuitem"><a  onclick="showTab(1);" id="tab-1" class="active">Pizzas</a></div>
 				<div class="menuitem"><a  onclick="showTab(2);" id="tab-2" class="item">Drinks</a></div>
 				<div class="menuitem"><a  onclick="showTab(3);" id="tab-3" class="item"><i></i>Desserts</a></div>
 			</div>

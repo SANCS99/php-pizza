@@ -30,19 +30,19 @@ include_once 'includes/navbar.php';
 ?>
 	</div>
 	<div class="container">
-		<div class="abt_session_0" ">
-			<img class="img0" src="images/PikPng.com_food-dish-png_735372.png">
+		<div class="abt_session_0" >
+			<img class="img0" src="images/session 1.jpg">
 			<div >
 				<div class="session" >
 					<div >
 						<h3>
-							<strong > About Those Hut</strong>
+							<strong > About Pizza Stone</strong>
 						</h3>
 					</div>
 
 					<div><h3>
 						<span><Strong> WHO WE ARE</Strong><br></span>
-						<span>Those Hut Enterprise Ltd</span>
+						<span>Pizza Stone Enterprise Ltd</span>
 						</h3>
 					</div>
 
@@ -62,7 +62,7 @@ include_once 'includes/navbar.php';
 						<h3 id="heading3"><strong>WHAT'S OUR GOAL</strong></h3>
 					</div>
 				
-					<div><h4>We're driven by a passion to connect people with faster, fresher qualityfood. In doing this, we've become a leader in the food-technology space, achieving industry firsts in drone delivery, app ordering, voice assistants,artificial intelligence and augmented reality. We are committed to consantly enhancing our customer's lives and continually improving and innovation our  product, our people and our technology to make sure our customers  receive a world class experience. We're "Those Hut" and we are hungry to be better..!</h4>
+					<div><h4>We're driven by a passion to connect people with faster, fresher qualityfood. In doing this, we've become a leader in the food-technology space, achieving industry firsts in drone delivery, app ordering, voice assistants,artificial intelligence and augmented reality. We are committed to consantly enhancing our customer's lives and continually improving and innovation our  product, our people and our technology to make sure our customers  receive a world class experience. We're "Pizza Stone" and we are hungry to be better..!</h4>
 					</div>
 			
 

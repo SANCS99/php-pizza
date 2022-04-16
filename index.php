@@ -70,14 +70,14 @@ include_once 'includes/navbar.php';
 		<!-- Session 3 starts here-->
 		<div class="container session3">
 			<div class="session3_0">
-				<img src="images/assets/Group 1188.png" style="width: 105%; height: 100%;">
+				<img src="images/assets/Group 4.jpg" style="width: 100%; height: 100%;">
 			
 			</div>
 			<div class="session3_0">
-				<img src="images/assets/Group 1189.png" style="width: 100%; height: 102%;">
+				<img src="images/assets/Group 1.png" style="width: 100%; height: 102%;">
 			</div>
 			<div class="session3_0">
-				<img src="images/assets/Group 1190.png" style="width: 108%; height: 100%;">
+				<img src="images/assets/Group 3.jpg" style="width: 108%; height: 100%;">
 			</div>
 
 
