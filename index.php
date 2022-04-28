@@ -8,7 +8,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ThozeHut</title>
+		<title>PizzaStone</title>
 		<!-- Link to CSS file -->
 		<link rel="stylesheet" href="css/style.css">
 

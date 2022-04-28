@@ -10,7 +10,7 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ThozeHut Stores</title>
+        <title>PizzaStone Stores</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/stores.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">

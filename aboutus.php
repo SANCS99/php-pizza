@@ -20,7 +20,7 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="css/about-us.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-		<title>ThozeHut About Us</title>
+		<title>PizzaStone About Us</title>
 		
 	</head>
 	<body>

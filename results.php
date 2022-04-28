@@ -47,7 +47,7 @@ if (isset($_POST['search'])) {
 
 	
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<title>ThozeHut Menu</title>
+			<title>PizzaStone Menu</title>
 		</head>
 		<body>
 			
