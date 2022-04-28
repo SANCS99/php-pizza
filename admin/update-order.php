@@ -44,37 +44,54 @@ include_once '../includes/check.inc.php';
 
     <div class="content">
         <div class="wrapper">
-            <div class="outer-wrap">
+            <div class="outer-wrap" style="height:590px">
                 <div class="img-wrap">
                     <img src="../images/admin/food.png" alt="form-img">
                 </div>
 
-                <div class="form-wrap" style="padding-top: 50px;">
-                    <h1>Add Food</h1>
+                <div class="form-wrap" style="padding-top: 20px;">
+                    <h1>Update Order</h1>
                     <br><br>
 
                     <?php
-                    if(isset($_SESSION['upload'])){
-                        echo $_SESSION['upload'];
-                        unset($_SESSION['upload']);
+
+                    include_once '../includes/dbh.inc.php';
+
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+
+                        $sql = "SELECT * FROM orders WHERE order_id=$id";
+
+                        $result = mysqli_query($conn, $sql);
+
+                        $row = mysqli_fetch_assoc($result);
+
+                        $tprice = $row['total_price'];
+                        $location = $row['req_location'];
+                        $uname = $row['user_name'];
+                        $cno = $row['contact_num'];
+                    }
+                    else{
+                        header("Location:manage-orders.php?update=failed");
                     }
                     ?>
                     
-                    <form action="../includes/addFood.inc.php" method="POST" enctype="multipart/form-data">
-                        Title <input type="text" name="title" placeholder="Food title">
+                    <form action="../includes/updateOrder.inc.php" method="POST" enctype="multipart/form-data">
+                        Total Price <input type="text" name="price" placeholder="Order price" value="<?php echo $title?>">
                         <br><br>
-                        Category <br><br>
-                        <select name="category">
-                            <option>Food</option>
-                            <option>Drink</option>
-                            <option>Desert</option>
-                        </select>
+                        Location <br><br>
+                        
                         <br><br>
-                        Image <input type="file" name="image">
+                        User Name
                         <br><br>
-                        Price <input type="num" name="price" placeholder="Price">
+                        Contact Number
+
                         <br><br>
-                        <input type="submit" name="submit" value="Add Food" class="btn-update">
+                        Price <input type="num" name="price" placeholder="Price" value="<?php echo $price?>">
+                        <br><br>
+                        <input type="hidden" name="id" value="<?php echo $id?>">
+                        <!-- <input type="hidden" name="current_image" value="<?php echo $current_image?>"> -->
+                        <input type="submit" name="submit" value="Update Order" class="btn-update">
                     </form>
                 </div>
             </div>

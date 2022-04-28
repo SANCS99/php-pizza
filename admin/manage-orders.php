@@ -29,7 +29,7 @@ include_once '../includes/check.inc.php';
                     <li><a href="manage.php"><i class="fas fa-users-cog"></i>Admin</a></li>
                     <li><a href="manage-user.php"><i class="fas fa-users"></i>Users</a></li>
                     <li><a href="manage-food.php"><i class="fas fa-hamburger"></i>Food</a></li>
-                    <li><a href="manage-orders.php"><i class="fa fa-expeditedssl"></i>Orders</a></li>
+                    <li><a href="manage-order.php"><i class="fas fa-expeditedssl"></i>Orders</a></li>
                 </ul>
                 
                 <div class="logout-btn">
@@ -45,12 +45,12 @@ include_once '../includes/check.inc.php';
 
     <div class="content">
         <div class="wrapper">
-            <h1>Manage Food</h1>
+            <h1>Manage Orders</h1>
             <br>
             <br>
 
         
-            <a href="add-food.php" class="btn-add">Add Food</a>
+            <a href="add-food.php" class="btn-add">Add VIP order</a>
             <br><br>
 
             <?php
@@ -74,11 +74,11 @@ include_once '../includes/check.inc.php';
         
             <table style="">
                 <tr>
-                    <th>Number</th>
-                    <th>Item Name</th>
-                    <th>Category</th>
-                    <th>Image</th>
-                    <th>Price</th>
+                    <th>Order ID</th>
+                    <th>Total Price</th>
+                    <th>Location</th>
+                    <th>User Name</th>
+                    <th>Contact Number</th>
                     <th>Action</th>
                 </tr>
 
@@ -86,7 +86,7 @@ include_once '../includes/check.inc.php';
 
                 include_once '../includes/dbh.inc.php';
 
-                $sql = "SELECT * FROM items";
+                $sql = "SELECT * FROM orders";
 
                 $result = mysqli_query($conn, $sql);
 
@@ -96,28 +96,21 @@ include_once '../includes/check.inc.php';
 
                 if ($count > 0) {
                     while($row = mysqli_fetch_assoc($result)){
-                        $id = $row['item_id'];
-                        $title = $row['item_name'];
-                        $category = $row['category'];
-                        $imgName = $row['image_src'];
-                        $price = $row['price'];
+                        $id = $row['order_id'];
+                        $total = $row['total_price'];
+                        $location = $row['req_location'];
+                        $usrName = $row['user_name'];
+                        $price = $row['contact_num'];
 
                         echo "<tr>
-                                <td>".$num++."</td>
-                                <td>".$title."</td>
-                                <td>".$category."</td>
-                                <td>";
-                                   if ($imgName ==  "") {
-                                       echo "<div class='error'>Image not added</div>";
-                                   }
-                                   else{
-                                       echo "<img src='../images/food/".$imgName."' width='100px'";
-                                   }
-                        echo    "</td>
+                                <td>".$id."</td>
+                                <td>".$total."</td>
+                                <td>".$location."</td>
+                                <td>".$usrName."</td>
                                 <td>".$price."</td>
                                 <td>
-                                    <a href='update-food.php?id=".$id."' class='btn-update'>Update</a>
-                                    <a href='../includes/deleteFood.inc.php?id=".$id."' class='btn-delete'>Delete</a>
+                                    
+                                    <a href='../includes/deleteOrder.inc.php?id=".$id."' class='btn-delete'>Remove</a>
                                 </td>
                             </tr>";
                     }
