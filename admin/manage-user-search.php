@@ -10,7 +10,7 @@ include_once '../includes/check.inc.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document-Search</title>
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
 </head>
@@ -26,7 +26,6 @@ include_once '../includes/check.inc.php';
                     <li><a href="manage.php"><i class="fas fa-users-cog"></i>Admin</a></li>
                     <li><a href="manage-user.php"><i class="fas fa-users"></i>Users</a></li>
                     <li><a href="manage-food.php"><i class="fas fa-hamburger"></i>Food</a></li>
-                    <li><a href="manage-orders.php"><i class="fas fa-file"></i>Orders</a></li>               
                 </ul>
                 
                 <div class="logout-btn">
@@ -48,15 +47,15 @@ include_once '../includes/check.inc.php';
 
             <!-- search part start -->
             <div style="text-align:right; padding-right:250px">
-
                 <form action="manage-user-search.php" method="post" id="searchform">
-                    
-                        <input type="text" name="search_text" id="search_text" placeholder="Search here.. &nbsp; &#8981;"
+                    <div class="divsearch_input">
+                        <input type="text" name="search_text" placeholder="Search here.. &nbsp; &#8981;"
                         style="width:200px; height:20px; border-radius: 8px; background-color: rgb(227, 231, 238);">
                     
-                        <button type="submit" name="button_search" form="searchform" value="Search"
-                        style="width:80px; height:20px; border-radius: 8px; background-color: rgb(201, 216, 241);">Search</button>
-                    
+                        <button type="submit" name="button_search" class="search_button" form="searchform" value="Search"
+                        style="width:80px; height:20px; border-radius: 8px; background-color: rgb(201, 216, 241);">
+                        Search</button>
+                    </div>
                 </form>
             </div>
             <!-- search part end -->
@@ -79,27 +78,46 @@ include_once '../includes/check.inc.php';
                 </tr>
 
                 <?php
+                    include_once '../includes/dbh.inc.php';
+                
+                    if(isset($_POST['button_search'])){
 
-                include_once '../includes/dbh.inc.php';
+                        $search_text = $_POST['search_text'];
 
-                $sql = "SELECT * FROM users";
+                        $searchsql = "SELECT * FROM users 
+                        WHERE first_name = '$search_text' or 
+                        last_name = '$search_text' or 
+                        email='$search_text' or 
+                        username='$search_text' or 
+                        password='$search_text' or 
+                        status='$search_text';";
 
-                $result = mysqli_query($conn, $sql);
+                    $searchresult = mysqli_query($conn, $searchsql);
+                    $checkCheckResult = mysqli_num_rows($searchresult);
 
-                if ($result == TRUE) {
-                    $count = mysqli_num_rows($result);
+                    $searchdata = array();
 
-                    $num = 1;
+                        if ($checkCheckResult > 0){
+                         while($seachrow = mysqli_fetch_assoc($searchresult)){
+                                $searchdata[] = $seachrow;
+                            }
+                        }
+                        $count = "0";
+                        $loop_data =0;
+                        $count_Result = mysqli_query($conn, $searchsql);
+                        $count_rows = mysqli_num_rows($count_Result);
 
-                    if ($count > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $id = $row['user_id'];
-                            $first_name = $row['first_name'];
-                            $last_name = $row['last_name'];
-                            $email = $row['email'];
-                            $username = $row['username'];
-                            $status = $row['status'];
+                        while($loop_data = mysqli_fetch_assoc($count_Result)){
+                            
+                            $id = $searchdata[$count]['user_id'];
+                            $first_name = $searchdata[$count]['first_name'];
+                            $last_name = $searchdata[$count]['last_name'];
+                            $email = $searchdata[$count]['email'];
+                            $username = $searchdata[$count]['username'];
+                            $pw = $searchdata[$count]['password'];
+                            $status = $searchdata[$count]['status'];
 
+                            $num = 1;
                             echo '<tr>
                                     <td>'.$num++.'</td>
                                     <td>'.$first_name.'</td>
@@ -112,9 +130,12 @@ include_once '../includes/check.inc.php';
                                         <a href="delete-user.php?id='.$id.'" class="btn-delete">Delete</a>
                                     </td>
                                  </tr>';
+
                         }
+
+
                     }
-                }
+                
 
                 ?>
             </table>

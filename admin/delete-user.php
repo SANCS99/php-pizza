@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update User</title>
+    <title>Delete User</title>
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <style type="text/css">
@@ -44,7 +44,6 @@
                     <li><a href="manage.php"><i class="fas fa-users-cog"></i>Admin</a></li>
                     <li><a href="manage-user.php"><i class="fas fa-users"></i>Users</a></li>
                     <li><a href="manage-food.php"><i class="fas fa-hamburger"></i>Food</a></li>
-                    <li><a href="manage-orders.php"><i class="fas fa-file"></i>Orders</a></li>                
                 </ul>
                 
                 <div class="logout-btn">
@@ -64,9 +63,9 @@
                 
 
                 <div class="form-wrap" style="width:100%; padding-top: 30px;">
-                    <h1>Update User</h1>
+                    <h1>Delete User</h1>
                     <br><br>
-
+                    <b>*Please confirm the user details before deleting*</b>
                     <?php
 
                     include_once '../includes/dbh.inc.php';
@@ -90,48 +89,47 @@
                             $status = $row['status'];
                         }
                         else{
-                            header("Location:manage-user.php?update=failed");
+                            header("Location:manage-user.php?delete=failed");
                         }
                     }
 
                     ?>
-
-                    <form action="../includes/updateUser.inc.php" method="POST">
+                    
+                    
+                    <br><br><br><br>
+                    <div style="text-align:left;">
                         <table>
                             <tr>
-                                <td>First Name</td>
-                                <td><input type="text" name="firstname" value="<?php echo $first_name; ?>"></td>
+                                <td><lable><b>First Name</b></lable></td>
+                                <td>:</td>
+                                <td><?php echo $first_name; ?></td>
                             </tr>
-
                             <tr>
-                                <td>Last Name </td>
-                                <td><input type="text" name="lastname" value="<?php echo $last_name; ?>"></td>
+                                <td><lable><b>Last Name</b></lable></td>
+                                <td>:</td>
+                                <td><?php echo $last_name; ?></td>
                             </tr>
-
                             <tr>
-                                <td>Email</td>
-                                <td><input type="text" name="email" value="<?php echo $email; ?>"></td>
+                                <td><lable><b>Email</b></lable></td>
+                                <td>:</td>
+                                <td><?php echo $email; ?></td>
                             </tr>
-
                             <tr>
-                                <td>Username</td>
-                                <td><input type="text" name="username" value="<?php echo $username; ?>"></td>
+                                <td><lable><b>Username</b></lable></td>
+                                <td>:</td>
+                                <td><?php echo $username; ?></td>
                             </tr>
-
                             <tr>
-                                <td>Status</td>
-                                <td>
-                                    <input <?php if ($status == "Block") { echo "checked";}?> style="height: 15px; width: 50%;border-radius: 10px; margin: 10px; padding-left: 10px;" type="radio" name="status" value="Block">Block 
-                                    <input <?php if ($status == "Unblock") { echo "checked";}?> style="height: 15px; width: 50%; border-radius: 10px; margin: 10px; padding-left: 10px;" type="radio" name="status" value="Unblock">Unlock 
-                                </td>
+                                <td><lable><b>Status</b></lable></td>
+                                <td>:</td>
+                                <td><?php echo $status; ?></td>
                             </tr>
-
                         </table>
-
+                    </div>
+                    
+                    <form action="../includes/deleteUser.inc.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $id?>">
-                        <input type="submit" name="submit" value="Update Admin" class="btn-update">
-                        
-
+                        <input type="submit" name="submit" value="Delete Admin" class="btn-update">
                     </form>
                 </div>
             </div>
