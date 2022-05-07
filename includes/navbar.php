@@ -27,6 +27,7 @@
 				<a class="tg" href="menu.php">Menu</a>
 				<a class="tg" href="stores.php">Stores</a>
 				<a class="tg" href="aboutus.php">About Us</a>
+				<a class="tg" href="tems.php">Terms and Conditions</a>
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 					<i class="fa fa-bars dd"></i>
 				</a>

@@ -35,7 +35,7 @@ Those Hut
 |    |-loginadmin.php
 |    |-orderdetails.php
 |    |-customersdetails.php         
-|    
+|-Terms.php    
 |-Index.php
 |-Results.php
 |-Cart.php
@@ -47,4 +47,5 @@ Those Hut
 |-locations.php
 |-menu.php
 |-offers.php
+
 

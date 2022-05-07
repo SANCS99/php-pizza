@@ -71,8 +71,13 @@ include_once '../includes/check.inc.php';
             ?>
             
             <br><br>
+
         
-            <table style="">
+            <table id="myTable">
+
+            <tr>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Order IDs" title="Type in a user">
+            <br>
                 <tr>
                     <th>Number</th>
                     <th>Item Name</th>
@@ -129,6 +134,32 @@ include_once '../includes/check.inc.php';
                 
                 
             </table>
+
+            <script>
+            function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }       
+            }
+            }
+            </script>
+
+<br><br><br>
+                <a href="http://localhost/php-pizza/admin/manage-food.php" download="Food details">Download Food Report</a>
+                <br>
+
         </div>
     </div>
 </body>

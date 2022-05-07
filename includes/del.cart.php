@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "user1";
-$password = "user1";
+$username = "root";
+$password = "";
 $dbname = "pizza";
 
 // Create connection
