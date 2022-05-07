@@ -26,6 +26,7 @@ include_once '../includes/check.inc.php';
                     <li><a href="manage.php"><i class="fas fa-users-cog"></i>Admin</a></li>
                     <li><a href="manage-user.php"><i class="fas fa-users"></i>Users</a></li>
                     <li><a href="manage-food.php"><i class="fas fa-hamburger"></i>Food</a></li>
+                    <li><a href="manage-orders.php"><i class="fas fa-file"></i>Orders</a></li>
                 </ul>
                 
                 <div class="logout-btn">
@@ -139,6 +140,11 @@ include_once '../includes/check.inc.php';
 
                 ?>
             </table>
+
+            <br><br><br>
+                <a href="http://localhost/php-pizza/admin/manage-users-search.php" download="user">Download</a>
+                <br>
+
         </div>
     </div>
 </body>

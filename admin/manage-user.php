@@ -118,6 +118,12 @@ include_once '../includes/check.inc.php';
 
                 ?>
             </table>
+
+            <br><br><br>
+                <a href="http://localhost/php-pizza/admin/manage-user.php" download="user">Download</a>
+                <br>
+
+
         </div>
     </div>
 </body>
