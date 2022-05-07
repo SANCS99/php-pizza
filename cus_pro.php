@@ -115,7 +115,9 @@ include_once 'includes/navbar.php';
 
 
 
-
+<br>
+                <a href="http://localhost/php-pizza/cus_pro.php" download="Order details">Download</a>
+                <br>
 
 
 </div>

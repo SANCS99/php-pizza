@@ -229,7 +229,7 @@ table tr:nth-child(odd){
 
 .footer {
   background-color: black;
-  color: #fff;
+  color: rgb(201, 216, 241);
 }
 
 .menu .wrapper .sidebar .footer {
